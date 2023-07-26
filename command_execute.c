@@ -32,7 +32,7 @@ return (1);
 }
 if (i == 0)
 {
-if (execute_in_path(program_path, args, environ) == -1)
+if (execve(program_path, args, environ) == -1)
 success = 0;
 }
 custom_free(args);

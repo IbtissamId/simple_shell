@@ -7,7 +7,7 @@
  * @index: an integer index
  * Return: none
  */
-void check_alias_custom(char ***arguments, aliases *alias_list, int index)
+void check_alias_custom(char ***arguments, AliasStruct *alias_list, int index)
 {
 int i, alias_index;
 
@@ -31,7 +31,7 @@ custom_strcpy((*arguments)[i], alias_list[alias_index].value);
  * Return: integer
  */
 int custom_and_handling(char *input_line,
-char *file_name, aliases *alias_array, int *index)
+char *file_name, AliasStruct *alias_array, int *index)
 {
 char **arguments, **line_split;
 int should_break, arg_count, cmd_selector_result, i = 0;
@@ -53,7 +53,7 @@ for (i = 0; line_split[i]; i++)
 should_break = 0;
 arguments = custom_strtok(line_split[i], " \t");
 if (custom_strcmp(arguments[0], "alias"))
-check_custom_alias(&arguments, alias_array, *index);
+check_alias_custom(&arguments, alias_array, *index);
 arg_count = count_arguments(arguments);
 cmd_selector_result = select_command(arguments[0],
 arguments, file_name, alias_array, index, line_split, input_line);

@@ -10,29 +10,29 @@ void display_error(char **arguments, char *file_path, int error_code)
 char semicolon = ';';
 
 if (error_code == 5)
-print_to_stderr(2, "usage: unsetenv VARIABLE VALUE");
+custom_print_string(2, "usage: unsetenv VARIABLE VALUE");
 else if (error_code == 6)
 {
-print_to_stderr(2, "environment variable ");
-print_to_stderr(2, arguments[1]);
-print_to_stderr(2, " not found");
+custom_print_string(2, "environment variable ");
+custom_print_string(2, arguments[1]);
+custom_print_string(2, " not found");
 }
 else if (error_code == 7)
-print_to_stderr(2, "Syntax error: \"&\" unexpected");
+custom_print_string(2, "Syntax error: \"&\" unexpected");
 else if (error_code == 8)
-print_to_stderr(2, "Syntax error: \"|\" unexpected");
+custom_print_string(2, "Syntax error: \"|\" unexpected");
 else if (error_code == 9)
 {
-print_to_stderr(2, "Syntax error: \"");
-write_to_stderr(STDERR_FILENO, &semicolon, 1);
-write_to_stderr(STDERR_FILENO, &semicolon, 1);
-print_to_stderr(2, "\" unexpected");
+custom_print_string(2, "Syntax error: \"");
+write(STDERR_FILENO, &semicolon, 1);
+write(STDERR_FILENO, &semicolon, 1);
+custom_print_string(2, "\" unexpected");
 }
 else if (error_code == 10)
 {
-print_to_stderr(2, "alias: ");
-print_to_stderr(2, file_path);
-print_to_stderr(2, " not found");
+custom_print_string(2, "alias: ");
+custom_print_string(2, file_path);
+custom_print_string(2, " not found");
 }
 }
 /**

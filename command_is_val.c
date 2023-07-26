@@ -22,7 +22,7 @@ return (NULL);
 }
 else if (*my_env_function == '\0')
 {
-error(program_name, environment, NULL, 1);
+report_error(program_name, environment, NULL, 1);
 exit(EXIT_FAILURE);
 }
 else

@@ -12,7 +12,7 @@
  * Return: success value
  */
 int select_command(const char *command, char **arguments,
-char *program_name, aliases *alias_data,
+char *program_name, AliasStruct *alias_data,
 int *index, char **split_line, char *input_line)
 {
 cmd_executer executers[] = {

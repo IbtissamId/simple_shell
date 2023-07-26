@@ -8,7 +8,7 @@
  */
 int my_shell(int argc_custom, char **args_custom)
 {
-aliases alias_custom;
+AliasStruct alias_custom;
 int idx_custom = 0, ret_val_custom = 0;
 char *input_custom = NULL, *name_custom = args_custom[0], *temp_custom = NULL;
 

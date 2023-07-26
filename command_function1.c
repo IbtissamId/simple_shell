@@ -58,7 +58,7 @@ return (1);
  * Return: success (1)
  */
 int my_env_function(int count, char **arguments, char *program_name,
-aliases *my_aliases, int *index_ptr, char **my_split, char *input_line)
+AliasStruct *my_aliases, int *index_ptr, char **my_split, char *input_line)
 {
 int i;
 

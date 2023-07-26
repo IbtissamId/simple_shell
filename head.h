@@ -34,6 +34,7 @@ char *custom_strcat(char *destination, char *source);
 void remove_first_char(char **string_ptr);
 size_t my_strlen(char *str);
 int custom_getalias(AliasStruct *, char *, int **);
+void replace_custom_substring(char *input_str, char *old_sub, char *new_sub);
 int custom_strcmp(const char *str1, char *str2);
 int my_strncmp(const char *str1, char *str2, int num_chars);
 char *find_substring(char *str, char *sub);

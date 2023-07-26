@@ -33,6 +33,7 @@ char *custom_strcpy(char *destination, char *source);
 char *custom_strcat(char *destination, char *source);
 void remove_first_char(char **string_ptr);
 size_t my_strlen(char *str);
+int custom_getalias(custom_aliases *custom_alias, char *custom_var, int custom_idx);
 int custom_strcmp(const char *str1, char *str2);
 int my_strncmp(const char *str1, char *str2, int num_chars);
 char *find_substring(char *str, char *sub);

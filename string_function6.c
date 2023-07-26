@@ -22,7 +22,7 @@ do {
 start[k++] = start[l++];
 } while (start[l]);
 start[k] = '\0';
-_memcpy(start, new_sub, new_sub_len);
+my_memcpy(start, new_sub, new_sub_len);
 replace_custom_substring(start + new_sub_len, old_sub, new_sub);
 }
 

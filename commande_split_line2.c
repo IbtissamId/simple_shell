@@ -1,4 +1,4 @@
-#include "head"
+#include "head.h"
 /**
  * or_handling - handles ||
  * @input_line: input command line

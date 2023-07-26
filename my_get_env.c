@@ -29,7 +29,7 @@ return (NULL);
  * @custom_idx: custom index
  * Return: custom string
  */
-int custom_getalias(custom_aliases *custom_alias,
+int custom_getalias(AliasStruct *custom_alias,
 char *custom_var, int custom_idx)
 {
 int i;

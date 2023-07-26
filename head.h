@@ -14,7 +14,7 @@ extern char **environ;
 extern int EXIT_STATUS;
 
 /**
- * struct AliasStruct - struct aliases
+ * struct AliasStruct - struct Aliases
  * @name: alias name
  * @value: alias value
  */
@@ -33,7 +33,7 @@ char *custom_strcpy(char *destination, char *source);
 char *custom_strcat(char *destination, char *source);
 void remove_first_char(char **string_ptr);
 size_t my_strlen(char *str);
-int custom_getalias(custom_aliases *custom_alias, char *custom_var, int custom_idx);
+int custom_getalias(AliasStruct *, char *, int **);
 int custom_strcmp(const char *str1, char *str2);
 int my_strncmp(const char *str1, char *str2, int num_chars);
 char *find_substring(char *str, char *sub);
@@ -61,8 +61,8 @@ int report_error(char *cmd_name, char **cmd_args,
 		char *program_name, int error_code);
 
 /* Command Parsing Functions */
-int split_command(char *command, char *program_name,
-		AliasStruct *aliases_list, int *index_ptr);
+int split_command(char *, char *,
+		AliasStruct *, int *);
 void get_cmds(char ***, char *);
 int count_arguments(char **);
 char *is_valid_command(char *command, char *program_name, char **environment);
@@ -72,8 +72,8 @@ char *check_ops(char **);
 int custom_export(int arg_count, char **arguments, char *program_name,
 AliasStruct *custom_alias,
 int *index_ptr, char **custom_split, char *custom_line);
-int custom_unsetenv(int count, char **arguments, char *programName,
-MyDataStructure *data, int *index, char **splitLine, char *currentLine);
+int custom_unsetenv(int, char **, char *,
+AliasStruct *, int *, char **, char *);
 
 /* Built-in Commands Functions */
 int my_echo(char **arguments);

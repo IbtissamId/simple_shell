@@ -12,7 +12,7 @@
  * Return: success flag (1 on success, 0 on failure)
  */
 int custom_unsetenv(int count, char **arguments, char *programName,
-MyDataStructure *data, int *index, char **splitLine, char *currentLine)
+AliasStruct *data, int *index, char **splitLine, char *currentLine)
 {
 int i;
 

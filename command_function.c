@@ -12,7 +12,7 @@
  * Return: success
  */
 int my_exit_function(int num_args, char **arguments, char *program_name,
-aliases *my_alias, int *index_value, char **split_line,
+AliasStruct *my_alias, int *index_value, char **split_line,
 char *input_line)
 {
 int i = 0;
@@ -47,7 +47,7 @@ return (1);
  * Return: success
  */
 int custom_change_dir(int arg_count, char **arg_list, char *prog_name,
-aliases *alias_struct, int *index_ptr,
+AliasStruct *alias_struct, int *index_ptr,
 char **split_line, char *input_line)
 {
 char *path, *temp;
@@ -84,7 +84,7 @@ return (1);
  * Return: success
  */
 int custom_export(int arg_count, char **arguments, char *program_name,
-aliases *custom_alias, int *index_ptr, char **custom_split, char *custom_line)
+AliasStruct *custom_alias, int *index_ptr, char **custom_split, char *custom_line)
 {
 int i = 0;
 char *temp = NULL;

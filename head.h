@@ -33,8 +33,7 @@ char *custom_strcpy(char *destination, char *source);
 char *custom_strcat(char *destination, char *source);
 void remove_first_char(char **string_ptr);
 size_t my_strlen(char *str);
-int custom_getalias(AliasStruct *custom_alias,
-char *custom_var, int custom_idx);
+int custom_getalias(AliasStruct *alias, char *var, int idx);
 void remove_first_char(char **string_ptr);
 int custom_and_handling(char *input_line,
 char *file_name, AliasStruct *alias_array, int *index);

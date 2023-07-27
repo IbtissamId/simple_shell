@@ -22,23 +22,22 @@ return (custom_temp);
 }
 return (NULL);
 }
-/**
- * custom_getalias - retrieve custom aliases
- * @custom_alias: custom aliases array
- * @custom_var: custom variable name
- * @custom_idx: custom index
- * Return: custom string
- */
-int custom_getalias(AliasStruct *custom_alias,
-char *custom_var, int custom_idx)
-{
-int i;
 
-for (i = 0; i < custom_idx; i++)
+/**
+ * custom_getalias -retrieve aliases
+ * @alias: aliases
+ * @var: variable name
+ * @idx: index
+ * Return: string
+ */
+int custom_getalias(AliasStruct *alias, char *var, int idx)
 {
-if (!int custom_strcmp(const char *str1,
-char *str2)(custom_var, custom_alias[i].name))
-return (i);
-}
-return (-1);
+	int i;
+
+	for (i = 0; i < idx; i++)
+	{
+		if (!custom_strcmp(var, alias[i].name))
+			return (i);
+	}
+	return (-1);
 }

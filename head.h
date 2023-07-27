@@ -33,11 +33,16 @@ char *custom_strcpy(char *destination, char *source);
 char *custom_strcat(char *destination, char *source);
 void remove_first_char(char **string_ptr);
 size_t my_strlen(char *str);
-int custom_getalias(AliasStruct *, char *, int **);
+int custom_getalias(AliasStruct *custom_alias,
+char *custom_var, int custom_idx);
+void remove_first_char(char **string_ptr);
+int custom_and_handling(char *input_line,
+char *file_name, aliases *alias_array, int *index);
 void replace_custom_substring(char *input_str, char *old_sub, char *new_sub);
 int custom_strcmp(const char *str1, char *str2);
 int my_strncmp(const char *str1, char *str2, int num_chars);
 char *find_substring(char *str, char *sub);
+void check_alias_custom(char ***arguments, aliases *alias_list, int index);
 char *my_memcpy(char *destination, char *source, unsigned int num_bytes);
 void replace_custom_substring(char *input_str, char *old_sub, char *new_sub);
 

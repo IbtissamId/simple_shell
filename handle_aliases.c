@@ -31,7 +31,7 @@ custom_print_string(1, alias_list[i].value), custom_print_string(1, "'\n");
 }
 for (i = 1; i < count; i++)
 {
-alias_parts = custom_strtok(arguments[i], "'=");
+alias_parts = custom_strtok(arguments[i], "'="),
 j = custom_getalias(alias_list, alias_parts[0], *alias_count);
 if (!find_substring(arguments[i], "="))
 {

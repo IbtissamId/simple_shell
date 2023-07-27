@@ -116,7 +116,7 @@ size_t old_length;
 size_t new_length;
 
 while (*command == ' ' || *command == '\t')
-del(&command);
+remove_first_char(&command);
 
 old_length = my_strlen(command);
 if (old_length == 1)

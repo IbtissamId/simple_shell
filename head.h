@@ -38,6 +38,7 @@ char *custom_var, int custom_idx);
 void remove_first_char(char **string_ptr);
 int custom_and_handling(char *input_line,
 char *file_name, aliases *alias_array, int *index);
+void check_alias_custom(char ***arguments, AliasStruct *alias_list, int index);
 void replace_custom_substring(char *input_str, char *old_sub, char *new_sub);
 int custom_strcmp(const char *str1, char *str2);
 int my_strncmp(const char *str1, char *str2, int num_chars);

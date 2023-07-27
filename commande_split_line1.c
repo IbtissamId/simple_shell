@@ -52,7 +52,7 @@ for (i = 0; line_split[i]; i++)
 {
 should_break = 0;
 arguments = custom_strtok(line_split[i], " \t");
-if (custom_strcmp(arguments[0], "alias"))
+if (custom_strcmp(arguments[0], "alias_array"))
 check_alias_custom(&arguments, alias_array, *index);
 arg_count = count_arguments(arguments);
 cmd_selector_result = select_command(arguments[0],

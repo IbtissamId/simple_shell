@@ -107,7 +107,7 @@ else
 {
 while (environ[i])
 i++;
-environ[i] = _calloc(my_strlen(arguments[1]) + my_strlen(arguments[2]) + 3, 1);
+environ[i] = custom_calloc(my_strlen(arguments[1]) + my_strlen(arguments[2]) + 3, 1);
 custom_strcat(environ[i], arguments[1]);
 custom_strcat(environ[i], "=");
 custom_strcat(environ[i], arguments[2]);
